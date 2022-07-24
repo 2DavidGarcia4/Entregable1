@@ -1,7 +1,7 @@
 import React from "react";
-import { useState } from 'react'
+import { useState } from 'react';
 import Random from "./Random";
-import quotes from "../quotes.json"
+import quotes from "../quotes.json";
 let colors = ["#F47340", "#EF2F88", "#ac43f2", "#f8cb58", "#4700D8", "#211717", "#7c3316", "#d45806", "#F9CE00", "#00818A", "#b10303", "#318a65", "#1FA8CF", "#32FF6A", "#AD8B73", "#1D0251", "#E11D74", "#6ea009", "#A287F4", "#E71414"]
 
 function QuoteBox(){
@@ -18,7 +18,7 @@ function QuoteBox(){
             </div>
             <div className="footer" style={{color: color}}>
                <p>{quote.author}</p>
-               <button onClick={()=> {setCountQ(resQ = Random(quotes)), setCountC(resC = Random(colors))}} style={{backgroundColor: color}}><i className="bi bi-chevron-right"></i></button>
+               <button onClick={()=> {setCountQ(resQ = Random(quotes, resQ)), setCountC(resC = Random(colors, resC))}} style={{backgroundColor: color}}><i className="bi bi-chevron-right"></i></button>
             </div>
         </div>
       </div>
